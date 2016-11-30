@@ -1,10 +1,3 @@
-AjaxBetter.html
-
-
-
-
-
-
 <html>
 <head>
 
@@ -41,16 +34,10 @@ function setAjax(){
      }
    }
 }
-
-
-
 function myAjax(f, url, myDivToChange) {
    var poststr = getFormValues(f);
     postData(url, poststr, myDivToChange);
 }
-
-
-
 function postData(url, parameters, myDivToChange2){
    var xmlHttp = setAjax();
    xmlHttp.onreadystatechange =  function(){
@@ -75,10 +62,6 @@ function postData(url, parameters, myDivToChange2){
    xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xmlHttp.send(parameters);
 }
-
-
-
-
 function getFormValues(fobj){
    var str = "";
    var valueArr = null;
@@ -103,19 +86,12 @@ function getFormValues(fobj){
    str = str.substr(0,(str.length - 1));
    return str;
 }
-
-
-
-
 function sendToSpark(myIn){
     document.all.myParameter.value = myIn
     document.myForm.action = 'https://api.spark.io/v1/devices/' + document.all.myDeviceId.value + '/' + document.all.myFunctionName.value
     myAjax(document.all.myCoolForm, document.myForm.action, 'myDivId')   
     
 }
-
-
-
 //--></script>
 
 
@@ -201,21 +177,21 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
 
 
 
-<input type="button" value="a1-read" onClick="{
-    sendToSpark('a1-read')
+<input type="button" value="a0-read" onClick="{
+    sendToSpark('a0-read')
 }"><br>
 
 
 
-<input type="button" value="a4-send-0" onClick="{
+<input type="button" value="a5-send-0" onClick="{
     sendToSpark('a4-send-0')
 }">
 
 
-<input type="button" value="a0-read" onClick="{
-    sendToSpark('a0-read')
+<input type="button" value="a5-send-255" onClick="{
+    sendToSpark('a4-send-255')
 }">
-    
+                                                  
 Note: PWM only on A4, A5 presently<br>
 
 
