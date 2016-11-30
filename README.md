@@ -2,4 +2,4 @@
 project for robotics
 
 
-<a href="ajaxread">index</a><br>
+<a href="ajaxread">ajaxread</a><br>
